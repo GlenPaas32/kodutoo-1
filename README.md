@@ -1,7 +1,7 @@
 # Digitaalne Kell
 
 ## Autor
-Sinu Nimi
+Glen Paas
 
 ## Kirjeldus
 Veebirakendus, mis kuvab:
