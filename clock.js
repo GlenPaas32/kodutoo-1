@@ -45,36 +45,22 @@ function upDateClock() {
     document.getElementById('seconds').innerHTML = seconds;
 }
 
-function updateDate(){
+function updateDate() {
     dateTime = new Date();
 
     const weekdays = ["Pühapäev","Esmaspäev","Teisipäev","Kolmapäev","Neljapäev","Reede","Laupäev"];
-
     let weekday = weekdays[dateTime.getDay()];
+
     day = dateTime.getDate();
     month = dateTime.getMonth() + 1;
     year = dateTime.getFullYear();
 
-    document.getElementById('weekday').innerHTML = weekday;
+    if(day < 10) day = "0" + day;
+    if(month < 10) month = "0" + month;
+
+    document.getElementById('weekday').innerHTML = weekday + ",";
     document.getElementById('day').innerHTML = day + ".";
     document.getElementById('month').innerHTML = month + ".";
-    document.getElementById('year').innerHTML = year;
-}
-function updateDate(){
-    dateTime = new Date();
-    day = dateTime.getDate();
-    month = dateTime.getMonth() + 1;
-    year = dateTime.getFullYear();
-
-    if(day < 10){
-        day = "0" + day;
-    }
-    if(month < 10){
-        month = "0" + month;
-    }
-
-    document.getElementById('day').innerHTML = day + ".";
-    document.getElementById('month').innerHTML = month + ":";
     document.getElementById('year').innerHTML = year;
 }
 
